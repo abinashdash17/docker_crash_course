@@ -50,24 +50,26 @@ docker run -d container
 docker attach -> attach to stdin/stdout
 docker run redis:tag
 
-# port mapping
--p 80:5000
-host 80, container 5000
-# volume mounting
--v host_dir:container_dir
--v ~/nginx-config:/etc/nginx
+# docker run
 ## notes
+1. docker runs in an non-interactive mode. so if the app expects an input, the container will run without waiting for STDIN.
+2. to avoid the above issue, use -i mode. but it's not attached to container's terminal
+3. for that use -t to attach to an tty
+
+## port mapping
+-p 80:5000\
+host 80, container 5000\
+## volume mounting
+-v host_dir:container_dir\
+-v ~/nginx-config:/etc/nginx\
+### notes
 1. individual files can also mounted
 
 # more details
 `docker inspect cotainer_name`\
 `docker logs container_name`
 
-# notes
 
-1. docker runs in an non-interactive mode. so if the app expects an input, the container will run without waiting for STDIN.
-2. to avoid the above issue, use -i mode. but it's not attached to container's terminal
-3. for that use -t to attach to an tty
 
 # keywords
 docker host/ docker engine
