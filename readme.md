@@ -60,8 +60,8 @@ host 80, container 5000
 1. individual files can also mounted
 
 # more details
-docker inspect cotainer_name
-docker logs container_name
+`docker inspect cotainer_name`\
+`docker logs container_name`
 
 # notes
 
