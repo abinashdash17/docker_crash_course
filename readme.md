@@ -57,16 +57,16 @@ docker run redis:tag
 3. for that use -t to attach to an tty
 
 ## port mapping
--p 80:5000\
-host 80, container 5000\
+-p 80:5000 \
+host 80, container 5000 \
 ## volume mounting
--v host_dir:container_dir\
--v ~/nginx-config:/etc/nginx\
+-v host_dir:container_dir \
+-v ~/nginx-config:/etc/nginx \
 ### notes
 1. individual files can also mounted
 
 # more details
-`docker inspect cotainer_name`\
+`docker inspect cotainer_name` \
 `docker logs container_name`
 
 
